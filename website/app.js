@@ -55,11 +55,11 @@ const updateUI = async (url = "/all") => {
   try {
     const allData = await req.json();
     console.log(allData)
-    // return allData;
     // add data to UI
-    document.getElementById('temp').innerHTML = allData.temp;
     document.getElementById('date').innerHTML = allData.date;
+    document.getElementById('temp').innerHTML = allData.temp;
     document.getElementById('content').innerHTML = allData.feelings;
+
   } catch (error) {
     console.log("error", error);
   }
