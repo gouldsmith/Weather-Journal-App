@@ -20,8 +20,7 @@ function performAction(e) {
       temp: data.main.feels_like,
       feelings: feels,
       date: newDate,
-    })
-    .then(updateUI())
+    }).then(updateUI());
   });
 }
 
@@ -53,13 +52,14 @@ const postData = async (url = "", data = {}) => {
 const updateUI = async (url = "/all") => {
   const req = await fetch(url);
   try {
-    const allData = await req.json();
-    console.log(allData)
+    const weatherData = await req.json();
+    console.log(weatherData);
     // add data to UI
-    document.getElementById('date').innerHTML = allData.date;
-    document.getElementById('temp').innerHTML = allData.temp;
-    document.getElementById('content').innerHTML = allData.feelings;
-
+    document.getElementById("date").innerHTML = "Date " + weatherData.date;
+    document.getElementById("temp").innerHTML =
+      "Temp " + weatherData.temp + "°F";
+    document.getElementById("content").innerHTML =
+      "Feeling — " + weatherData.feelings;
   } catch (error) {
     console.log("error", error);
   }

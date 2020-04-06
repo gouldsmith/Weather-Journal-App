@@ -10,14 +10,10 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 app.use(cors());
 
-// Start up an instance of app
-
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-// Cors for cross origin allowance
 
 // Initialize the main project folder
 app.use(express.static("website"));
@@ -39,6 +35,7 @@ function sendData(req, res) {
   res.send(projectData);
 }
 
+// POST
 app.post("/add", addWeather);
 
 function addWeather(req, res) {

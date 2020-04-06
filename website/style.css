@@ -1,16 +1,17 @@
 body {
   background: #fffff8;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #app {
   display: grid;
   grid-auto-rows: minmax(150px, auto);
   /* grid-template-columns:  */
-  height: 100vh;
-  background: darkblue;
-  color: #f0d43a;
+  align-content: center;
   justify-content: center;
+  height: 100vh;
+  background: lightseagreen;
+  color: #f0d43a;
   grid-gap: 1em;
   font-size: 20px;
   font-family: "Oswald", sans-serif;
@@ -24,6 +25,9 @@ body {
 }
 
 #entryHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 #date {
@@ -36,7 +40,9 @@ body {
 }
 
 .headline {
+font-size: 3rem;
 }
+
 .title {
 }
 
@@ -88,17 +94,21 @@ button:focus {
 ::placeholder {
   /* Firefox, Chrome, Opera */
   color: #f0d43a;
-  font-family: "Oswald", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #f0d43a;
-  font-family: "Oswald", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #f0d43a;
-  font-family: "Oswald", sans-serif;
+  font-family: "Lato", sans-serif;
+}
+
+#generate {
+justify-self: center;
 }
